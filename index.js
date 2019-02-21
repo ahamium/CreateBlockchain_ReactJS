@@ -15,7 +15,9 @@ const REDIS_URL = isDevelopment ?
   'redis://h:pcb5f6720354bff101d92685e86721b9f3bd76d9893ab53977b3335a78aa671cd@ec2-3-208-33-137.compute-1.amazonaws.com:29829'
   //'redis://h:p05f9a274bd0e2414e52cb9516f8cbcead154d7d61502d32d9750180836a7cc05@ec2-34-225-229-4.compute-1.amazonaws.com:19289'
 const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
+const ROOT_NODE_ADDRESS = isDevelopment ?
+ `http://localhost:${DEFAULT_PORT}` :
+ 'https://protected-caverns-80602.herokuapp.com/';
 
 const app = express();
 const blockchain = new Blockchain();
