@@ -19,7 +19,7 @@ class App extends Component {
         <img className='logo' src={logo}></img>
         <br />
         <div>
-         The blockchain of PoongCoin
+         The blockchain of PoongCoin 뀨
         </div>
         <br />
         <div><Link to='/blocks'>Blocks</Link></div>
